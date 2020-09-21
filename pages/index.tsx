@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       {data.map((item) => (
-        <div>
+        <div key={item.id}>
           <h2>{item.title}</h2>
           <small>{item.date}</small>
           <p>{item.description}</p>
