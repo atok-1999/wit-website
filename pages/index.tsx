@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import React from 'react';
 import useFetchData from '../src/api/useFetchData';
 
@@ -15,4 +16,12 @@ export default function Home() {
       ))}
     </div>
   );
+=======
+import * as React from 'react';
+
+const Index = () => {
+  return (
+    <Home />
+  )
+>>>>>>> Stashed changes
 }
