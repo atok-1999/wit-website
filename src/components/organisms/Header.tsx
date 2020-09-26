@@ -8,7 +8,6 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         height: '7.5vh',
         backgroundColor: theme.palette.primary.light,
-        position: 'sticky',
         marginTop: 'auto'
     },
     navigation: {
