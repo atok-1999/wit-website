@@ -3,10 +3,14 @@ import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     mission: {
-        height: '90vh',
+        border: 'solid blue',
+        height: '92.5vh',
         width: '100%',
+        textAlign: 'center',
     },
     news: {
+        textAlign: 'center',
+        border: 'solid',
         height: '90vh',
         width: '100%',
     }
@@ -18,7 +22,7 @@ const Home = () => {
     return (
         <>
             <div className={classes.mission}>
-                ミッション
+                ミッションをここに書く
             </div>
             <div className={classes.news}>
                 ニュース・イベント

@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Link from 'next/link'
-import { makeStyles } from '@material-ui/core/styles'
+import Link from 'next/link';
+import { makeStyles } from '@material-ui/core/styles';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         height: '7.5vh',
         backgroundColor: theme.palette.primary.light,
-        position: 'sticky'
+        marginTop: 'auto'
     },
     navigation: {
         display: 'flex',
