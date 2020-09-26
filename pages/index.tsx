@@ -1,7 +1,9 @@
 import * as React from 'react';
-import useFetchData from 'src/api/useFetchData';
+import Home from 'src/components/organisms/Home';
 
-export default function Home() {
+// import useFetchData from 'src/api/useFetchData';
+
+const Index = () => {
   // const [data, setData] = useFetchData('news');
 
   return (
@@ -17,3 +19,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Index;
