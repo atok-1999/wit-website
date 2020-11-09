@@ -1,19 +1,12 @@
 import * as React from 'react';
 import { makeStyles } from '@material-ui/core';
+import * as Font from '../../constant/fonts'
 
 const useStyles = makeStyles((theme) => ({
     mission: {
-        border: 'solid blue',
-        height: '92.5vh',
-        width: '100%',
-        textAlign: 'center',
+        height: 100,
+        fontFamily: Font.WONDER_UNIT_SANS_BOLD
     },
-    news: {
-        textAlign: 'center',
-        border: 'solid',
-        height: '90vh',
-        width: '100%',
-    }
 }))
 
 const Home = () => {
@@ -22,10 +15,7 @@ const Home = () => {
     return (
         <>
             <div className={classes.mission}>
-                ミッションをここに書く
-            </div>
-            <div className={classes.news}>
-                ニュース・イベント
+                0123
             </div>
         </>
     )

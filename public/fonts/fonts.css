@@ -1,0 +1,29 @@
+/* regular */
+@font-face {
+  font-family: 'LEMONMILK';
+  src: url('./LEMONMILK-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'WonderUnitSans';
+  src: url('./WonderUnitSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* bold */
+@font-face {
+  font-family: 'LEMONMILK_bold';
+  src: url('./LEMONMILK-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'WonderUnitSans_bold';
+  src: url('./WonderUnitSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}

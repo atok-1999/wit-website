@@ -1,0 +1,5 @@
+export const LEMONMILK_REGULAR = 'LEMONMILK'
+export const LEMONMILK_BOLD = 'LEMONMILK_bold'
+export const WONDER_UNIT_SANS_REGULAR = 'WonderUnitSans'
+export const WONDER_UNIT_SANS_BOLD = 'WonderUnitSans_bold'
+export const HIRAGINO_KAKU_GOTHIC_PRO = 'Hiragino Kaku Gothic Pro'
