@@ -1,0 +1,36 @@
+/* regular */
+@font-face {
+  font-family: 'LEMONMILK';
+  src: url('./LEMONMILK-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Wonder Unit Sans';
+  src: url('./WonderUnitSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Corporate Logo Rounded';
+  src: url('./corp_round_v1.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* bold */
+@font-face {
+  font-family: 'LEMONMILK bold';
+  src: url('./LEMONMILK-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Wonder Unit Sans bold';
+  src: url('./WonderUnitSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}

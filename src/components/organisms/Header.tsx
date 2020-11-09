@@ -1,62 +1,43 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import * as Font from 'src/constant/fonts'
 
 
 const useStyles = makeStyles((theme) => ({
-    container: {
-        width: '100%',
-        height: '7.5vh',
-        backgroundColor: theme.palette.primary.light,
-        marginTop: 'auto'
+    root: {
+        flexGrow: 1,
+        backgroundColor: theme.palette.primary.main
     },
-    navigation: {
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
+    title: {
+        flexGrow: 1,
+        fontFamily: Font.CORPORATE_LOGO_ROUNDED
     },
-    siteName: {
-        Color: '#endregion',
-        justifyContent: 'center',
-        fontSize: '50px',
-        color: theme.palette.primary.contrastText,
-        marginLeft: '10px',
-    },
-    navList: {
-        display: 'flex',
-        displayDirection: 'row',
-        marginRight: '20px'
-    },
-    nav: {
-        color: theme.palette.primary.contrastText,
-        listStyle: 'none',
-        margin: 'auto 10px',
+    menu: {
+        fontFamily: Font.LEMONMILK_REGULAR
     }
 }))
 
 const Header = () => {
     const classes = useStyles();
     return (
-        <div className={classes.container}>
-            <div className={classes.navigation}>
-                <div className={classes.siteName}>Wit</div>
-                <ul className={classes.navList}>
-                    <li className={classes.nav}>
-                        <Link href="/">Home</Link>
-                    </li>
-                    <li className={classes.nav}>
-                        <Link href='/about'>About</Link>
-                    </li>
-                    <li className={classes.nav}>
-                        <Link href='/blog'>Blog</Link>
-                    </li>
-                    <li className={classes.nav}>
-                        <Link href="/contact">Contect</Link>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
+    <div className={classes.root}>
+        <AppBar position="static">
+        <Toolbar>
+          <Typography variant="h6" className={classes.title}>
+            Wit
+          </Typography>
+          <Button color="inherit" className={classes.menu}>ABOUT</Button>
+          <Button color="inherit" className={classes.menu}>ACTIVITIES</Button>
+          <Button color="inherit" className={classes.menu}>BLOG</Button>
+          <Button color="inherit" className={classes.menu}>CONTACT</Button>
+        </Toolbar>
+      </AppBar>
+    </div>
     )
 };
 
