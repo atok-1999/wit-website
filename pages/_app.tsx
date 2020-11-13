@@ -1,37 +1,21 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Head from 'next/head';
-import { ThemeProvider } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import theme from '../src/theme';
+import { AppProps } from 'next/app';
+import '../styles/globals.css';
+import Header from 'src/components/organisms/Header';
+import MaterialThemeProvider from 'src/components/MaterialThemeProvider';
+import NoSsr from '@material-ui/core/NoSsr';
 
-export default function MyApp(props) {
-  const { Component, pageProps } = props;
 
-  React.useEffect(() => {
-    // Remove the server-side injected CSS.
-    const jssStyles = document.querySelector('#jss-server-side');
-    if (jssStyles) {
-      jssStyles.parentElement.removeChild(jssStyles);
-    }
-  }, []);
-
+function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <React.Fragment>
-      <Head>
-        <title>My page</title>
-        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
-      </Head>
-      <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-        <CssBaseline />
+      <MaterialThemeProvider>
+        {/* ここはちゃんと調べる。_app.tsxと_document.tsxについて */}
+        <NoSsr>
+         <Header />
+        </NoSsr>
         <Component {...pageProps} />
-      </ThemeProvider>
-    </React.Fragment>
-  );
+      </MaterialThemeProvider>
+  )
 }
 
-MyApp.propTypes = {
-  Component: PropTypes.elementType.isRequired,
-  pageProps: PropTypes.object.isRequired,
-};
+export default MyApp;
