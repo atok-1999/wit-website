@@ -1,7 +1,7 @@
 import React from 'react';
 
 // pages/blog/[id].js
-export default function BlogId({ blog }) {
+const BlogId = ({ blog }) => {
   return (
     <main>
       <h1>{blog.title}</h1>
@@ -13,7 +13,9 @@ export default function BlogId({ blog }) {
       />
     </main>
   );
-}
+};
+
+export default BlogId
 
 // 静的生成のためのパスを指定します
 export const getStaticPaths = async () => {
