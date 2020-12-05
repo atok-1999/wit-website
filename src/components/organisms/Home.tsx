@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { makeStyles } from '@material-ui/core';
 import * as Font from 'src/constant/fonts';
+import Router from 'next/router';
 
 const useStyles = makeStyles((theme) => ({
   main: {
@@ -122,8 +123,11 @@ const useStyles = makeStyles((theme) => ({
   },
   newsEventSection: {
     color: theme.palette.secondary.main,
-    [theme.breakpoints.down('sm')]: {
-      height: 650,
+    [theme.breakpoints.down('xs')]: {
+      height: 600,
+    },
+    [theme.breakpoints.up('sm')]: {
+      height: 800,
     },
     [theme.breakpoints.up('md')]: {
       height: 1500,
@@ -143,7 +147,10 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: Font.LEMONMILK_REGULAR,
     fontSize: '1rem',
     textAlign: 'center',
-    paddingTop: 80,
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: `translate(-50%, -50%)`,
     color: '#fff',
   },
   hoverMask: {
@@ -246,7 +253,10 @@ const Home = () => {
           <div className={classes.subtitleIndex}>003</div>
           <div className={classes.subtitleCaption}>NEWS/EVENT</div>
         </div>
-        <div className={classes.eventImgContainer}>
+        <div
+          className={classes.eventImgContainer}
+          onClick={() => Router.push('/Blog').then(() => window.scrollTo(0, 0))}
+        >
           <div className={classes.hoverContainer}>
             <img
               src='static/event-sample-1.png'
@@ -302,12 +312,32 @@ const Home = () => {
         </div>
 
         <div className={classes.seeActivities}>
-          <div style={{ width: '88%' }}>
+          <div
+            style={{ width: '88%', position: 'relative' }}
+            onClick={() =>
+              Router.push('/Activities').then(() => window.scrollTo(0, 0))
+            }
+          >
             <img
               src='static/see-activities.png'
               alt='activities'
               width={'100%'}
             />
+            <div
+              style={{
+                position: 'absolute',
+                fontFamily: Font.LEMONMILK_REGULAR,
+                fontSize: '1rem',
+                top: '50%',
+                left: '50%',
+                transform: `translate(-50%, -50%)`,
+                zIndex: 10,
+                pointerEvents: 'none',
+              }}
+            >
+              SEE ACTIVITES
+            </div>
+            <div className={classes.hoverMask}></div>
           </div>
         </div>
       </div>

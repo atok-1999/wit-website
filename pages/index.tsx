@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Home from 'src/components/organisms/Home';
-import Header from 'src/components/organisms/Header';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
