@@ -6,17 +6,21 @@ import { Grid } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    [theme.breakpoints.down('sm')]: {
-      height: 1500,
+    [theme.breakpoints.down('xs')]: {
+      height: 750,
+    },
+    [theme.breakpoints.up('sm')]: {
+      height: 1000,
     },
     [theme.breakpoints.up('md')]: {
-      height: 2000,
+      height: 1000,
     },
     backgroundColor: theme.palette.primary.main,
     justifyContent: 'center',
   },
   firstPhoto: {
     objectFit: 'cover',
+    cursor: 'pointer',
     [theme.breakpoints.down('xs')]: {
       height: 120,
       width: 300,
@@ -27,11 +31,12 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.up('md')]: {
       height: 300,
-      width: 600,
+      width: 700,
     },
   },
   photo: {
     objectFit: 'cover',
+    cursor: 'pointer',
     [theme.breakpoints.down('xs')]: {
       height: 120,
       width: 300,
@@ -58,16 +63,11 @@ const Blog = ({ blog }) => {
 
   return (
     <div className={classes.container}>
-      <Grid container justify={'space-between'}>
+      <Grid container justify={'center'}>
         {blog.map((blog, index) =>
           index === 0 ? (
             <Grid item xs={12} key={blog.id}>
               <div
-                onClick={() =>
-                  Router.push(`Blog/${blog.id}`).then(() =>
-                    window.scrollTo(0, 0)
-                  )
-                }
                 style={{
                   display: 'flex',
                   flexDirection: 'column',
@@ -79,19 +79,19 @@ const Blog = ({ blog }) => {
                 <img
                   src={blog.image.url}
                   alt=''
+                  onClick={() =>
+                    Router.push(`Blog/${blog.id}`).then(() =>
+                      window.scrollTo(0, 0)
+                    )
+                  }
                   className={classes.firstPhoto}
                 />
                 <div className={classes.title}>{blog.title}</div>
               </div>
             </Grid>
           ) : (
-            <Grid item xs={12} md={6} key={blog.id}>
+            <Grid item xs={12} md={5} key={blog.id}>
               <div
-                onClick={() =>
-                  Router.push(`Blog/${blog.id}`).then(() =>
-                    window.scrollTo(0, 0)
-                  )
-                }
                 style={{
                   display: 'flex',
                   flexDirection: 'column',
@@ -104,6 +104,11 @@ const Blog = ({ blog }) => {
                   src={blog.image.url}
                   alt=''
                   className={classes.photo}
+                  onClick={() =>
+                    Router.push(`Blog/${blog.id}`).then(() =>
+                      window.scrollTo(0, 0)
+                    )
+                  }
                   style={{ borderRadius: 21 }}
                 />
                 <div className={classes.title}>{blog.title}</div>

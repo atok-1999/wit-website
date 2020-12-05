@@ -1,21 +1,60 @@
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 
-// pages/blog/[id].js
+const useStyles = makeStyles((theme) => ({
+  container: {
+    backgroundColor: theme.palette.primary.main,
+    paddingBottom: 300,
+  },
+  photo: {
+    [theme.breakpoints.down('xs')]: {
+      width: '85%',
+    },
+    [theme.breakpoints.up('sm')]: {
+      width: '65%',
+    },
+  },
+  textSection: {
+    color: theme.palette.primary.contrastText,
+    [theme.breakpoints.down('xs')]: {
+      width: '80%',
+    },
+    [theme.breakpoints.up('sm')]: {
+      width: '60%',
+    },
+  },
+}));
+
 const BlogId = ({ blog }) => {
+  const classes = useStyles();
+
   return (
-    <main>
-      <h1>{blog.title}</h1>
-      <p>{blog.postedAt}</p>
+    <main className={classes.container}>
       <div
-        dangerouslySetInnerHTML={{
-          __html: `${blog.body}`,
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          paddingTop: 20,
         }}
-      />
+      >
+        <img src={blog.image.url} alt='' className={classes.photo} />
+        <div className={classes.textSection}>
+          <h1>{blog.title}</h1>
+          <p>{blog.postedAt}</p>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `${blog.body}`,
+            }}
+          />
+        </div>
+      </div>
     </main>
   );
 };
 
-export default BlogId
+export default BlogId;
 
 // 静的生成のためのパスを指定します
 export const getStaticPaths = async () => {
