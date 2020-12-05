@@ -36,22 +36,22 @@ const Header = () => {
               <a>Wit</a>
             </Typography>
           </Link>
-          <Link href='/about'>
+          <Link href='/About'>
             <Button color='inherit' className={classes.menu}>
               <a>about</a>
             </Button>
           </Link>
-          <Link href='/activities'>
+          <Link href='/Activities'>
             <Button color='inherit' className={classes.menu}>
               <a>activities</a>
             </Button>
           </Link>
-          <Link href='/blog'>
+          <Link href='/Blog'>
             <Button color='inherit' className={classes.menu}>
               <a>blog</a>
             </Button>
           </Link>
-          <Link href='/contact'>
+          <Link href='/Contact'>
             <Button color='inherit' className={classes.menu}>
               <a>contact</a>
             </Button>
