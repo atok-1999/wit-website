@@ -36,16 +36,16 @@ export const About = () => {
     <div className={classes.container}>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <img
-          src='static/exciting-feeling-2.png'
+          src='/images/exciting-feeling-2.png'
           alt='exciting-feeling'
           width={'70%'}
           style={{ marginTop: 20 }}
         />
       </div>
       <div style={{ position: 'relative', marginTop: 50 }}>
-        <img src='static/about-sample.png' alt='about' width={'60%'} />
+        <img src='/images/about-sample.png' alt='about' width={'60%'} />
         <img
-          src='static/stimulating-environment.png'
+          src='/images/stimulating-environment.png'
           alt='about'
           style={{ position: 'absolute', right: 0, bottom: -25, width: '60%' }}
         />

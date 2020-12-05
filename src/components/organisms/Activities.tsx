@@ -131,7 +131,7 @@ export const Activities = () => {
     <div className={classes.container}>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <img
-          src='static/what-we-are-doing.png'
+          src='/images/what-we-are-doing.png'
           alt='what-we-are-doing'
           width={'70%'}
           style={{ marginTop: 20 }}
@@ -143,7 +143,7 @@ export const Activities = () => {
           <div className={classes.caption}>定例会</div>
           <div className={classes.rightSideImagePhoneContainer}>
             <img
-              src='static/activity-1.png'
+              src='/images/activity-1.png'
               alt='activity'
               className={classes.rightSideImagePhone}
             />
@@ -155,14 +155,14 @@ export const Activities = () => {
           </div>
         </div>
         <img
-          src='static/activity-1.png'
+          src='/images/activity-1.png'
           alt='activity'
           className={classes.rightSideImagePC}
         />
       </div>
       <div className={classes.activityRight}>
         <img
-          src='static/activity-2.png'
+          src='/images/activity-2.png'
           alt='activity'
           className={classes.leftSideImagePC}
         />
@@ -171,7 +171,7 @@ export const Activities = () => {
           <div className={classes.caption}>インターン生輩出</div>
           <div className={classes.leftSideImagePhoneContainer}>
             <img
-              src='static/activity-2.png'
+              src='/images/activity-2.png'
               alt='activity'
               className={classes.leftSideImagePhone}
             />
@@ -191,7 +191,7 @@ export const Activities = () => {
           <div className={classes.caption}>勉強会</div>
           <div className={classes.rightSideImagePhoneContainer}>
             <img
-              src='static/activity-3.png'
+              src='/images/activity-3.png'
               alt='activity'
               className={classes.rightSideImagePhone}
             />
@@ -202,14 +202,14 @@ export const Activities = () => {
           </div>
         </div>
         <img
-          src='static/activity-3.png'
+          src='/images/activity-3.png'
           alt='activity'
           className={classes.rightSideImagePC}
         />
       </div>
       <div className={classes.activityRight}>
         <img
-          src='static/activity-4.png'
+          src='/images/activity-4.png'
           alt='activity'
           className={classes.leftSideImagePC}
         />
@@ -221,7 +221,7 @@ export const Activities = () => {
           </div>
           <div className={classes.leftSideImagePhoneContainer}>
             <img
-              src='static/activity-4.png'
+              src='/images/activity-4.png'
               alt='activity'
               className={classes.leftSideImagePhone}
             />

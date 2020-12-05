@@ -188,19 +188,19 @@ const Home = () => {
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <div style={{ display: 'flex' }}>
             <img
-              src='static/logo-white.png'
+              src='/images/logo-white.png'
               alt='logo'
               className={classes.logo}
             />
             <img
-              src='static/exciting-feeling.png'
+              src='/images/exciting-feeling.png'
               alt='exciting-feeling'
               className={classes.excitingFeeling}
             />
           </div>
           <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
             <img
-              src='static/video-sample-img.png'
+              src='/images/video-sample-img.png'
               alt='video'
               className={classes.video}
             />
@@ -229,7 +229,7 @@ const Home = () => {
         </div>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <img
-            src='static/vision.png'
+            src='/images/vision.png'
             alt='vision'
             className={classes.visionImg}
           />
@@ -259,7 +259,7 @@ const Home = () => {
         >
           <div className={classes.hoverContainer}>
             <img
-              src='static/event-sample-1.png'
+              src='/images/event-sample-1.png'
               alt='event-1'
               style={{ width: '100%' }}
             />
@@ -272,7 +272,7 @@ const Home = () => {
           </div>
           <div className={classes.hoverContainer}>
             <img
-              src='static/event-sample-2.png'
+              src='/images/event-sample-2.png'
               alt='event-1'
               style={{ width: '100%' }}
             />
@@ -285,7 +285,7 @@ const Home = () => {
           </div>
           <div className={classes.hoverContainer}>
             <img
-              src='static/event-sample-3.png'
+              src='/images/event-sample-3.png'
               alt='event-1'
               style={{ width: '100%' }}
             />
@@ -298,7 +298,7 @@ const Home = () => {
           </div>
           <div className={classes.hoverContainer}>
             <img
-              src='static/event-sample-4.png'
+              src='/images/event-sample-4.png'
               alt='event-1'
               style={{ width: '100%' }}
             />
@@ -319,7 +319,7 @@ const Home = () => {
             }
           >
             <img
-              src='static/see-activities.png'
+              src='/images/see-activities.png'
               alt='activities'
               width={'100%'}
             />
