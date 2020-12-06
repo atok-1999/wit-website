@@ -129,7 +129,7 @@ export const Activities = () => {
   const classes = useStyles();
   return (
     <div className={classes.container}>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <div style={{ textAlign: 'center' }}>
         <img
           src='/images/what-we-are-doing.png'
           alt='what-we-are-doing'
@@ -142,11 +142,9 @@ export const Activities = () => {
           <div className={classes.index}>001</div>
           <div className={classes.caption}>定例会</div>
           <div className={classes.rightSideImagePhoneContainer}>
-            <img
-              src='/images/activity-1.png'
-              alt='activity'
-              className={classes.rightSideImagePhone}
-            />
+            <div className={classes.rightSideImagePhone}>
+              <img src='/images/activity-1.png' alt='activity' width={'100%'} />
+            </div>
           </div>
           <div className={classes.description}>
             定例ミーティングという名の、 <br />
@@ -170,11 +168,9 @@ export const Activities = () => {
           <div className={classes.index}>002</div>
           <div className={classes.caption}>インターン生輩出</div>
           <div className={classes.leftSideImagePhoneContainer}>
-            <img
-              src='/images/activity-2.png'
-              alt='activity'
-              className={classes.leftSideImagePhone}
-            />
+            <div className={classes.leftSideImagePhone}>
+              <img src='/images/activity-2.png' alt='activity' width={'100%'} />
+            </div>
           </div>
           <div className={classes.description}>
             イケてる企業と、インターンを探して
@@ -190,11 +186,9 @@ export const Activities = () => {
           <div className={classes.index}>003</div>
           <div className={classes.caption}>勉強会</div>
           <div className={classes.rightSideImagePhoneContainer}>
-            <img
-              src='/images/activity-3.png'
-              alt='activity'
-              className={classes.rightSideImagePhone}
-            />
+            <div className={classes.rightSideImagePhone}>
+              <img src='/images/activity-3.png' alt='activity' width={'100%'} />
+            </div>
           </div>
           <div className={classes.description}>
             著名な社長の話を一方的に聞く講演会のような形は、ニーズがあればやろうと思いますが、もっとアクティブな勉強会をしたい。
@@ -220,11 +214,9 @@ export const Activities = () => {
             イベントの開催
           </div>
           <div className={classes.leftSideImagePhoneContainer}>
-            <img
-              src='/images/activity-4.png'
-              alt='activity'
-              className={classes.leftSideImagePhone}
-            />
+            <div className={classes.leftSideImagePhone}>
+              <img src='/images/activity-4.png' alt='activity' width={'100%'} />
+            </div>
           </div>
           <div className={classes.description}>
             メンバーが魅力的なイベントを発案した際の、また企業や行政など外部から価値のあるイベントのコラボを依頼された場合、Witのアセットを用いて、最高のイベントになるよう全力でサポートします。
