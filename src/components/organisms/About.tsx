@@ -33,7 +33,7 @@ export const About = () => {
   const classes = useStyles();
   return (
     <div className={classes.container}>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <div style={{ textAlign: 'center' }}>
         <img
           src='/images/exciting-feeling-2.png'
           alt='exciting-feeling'

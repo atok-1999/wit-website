@@ -187,23 +187,25 @@ const Home = () => {
       <div className={classes.main}>
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <div style={{ display: 'flex' }}>
-            <img
-              src='/images/logo-white.png'
-              alt='logo'
-              className={classes.logo}
-            />
-            <img
-              src='/images/exciting-feeling.png'
-              alt='exciting-feeling'
-              className={classes.excitingFeeling}
-            />
+            <div className={classes.logo}>
+              <img src='/images/logo-white.png' alt='logo' width={'100%'} />
+            </div>
+            <div className={classes.excitingFeeling}>
+              <img
+                src='/images/exciting-feeling.png'
+                alt='exciting-feeling'
+                width={'100%'}
+              />
+            </div>
           </div>
           <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-            <img
-              src='/images/video-sample-img.png'
-              alt='video'
-              className={classes.video}
-            />
+            <div className={classes.video}>
+              <img
+                src='/images/video-sample-img.png'
+                alt='video'
+                width={'100%'}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -228,11 +230,9 @@ const Home = () => {
           <div className={classes.subtitleCaption}>VISION</div>
         </div>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <img
-            src='/images/vision.png'
-            alt='vision'
-            className={classes.visionImg}
-          />
+          <div className={classes.visionImg}>
+            <img src='/images/vision.png' alt='vision' width={'100%'} />
+          </div>
         </div>
         <div className={classes.visionDescription}>
           常にHOTで刺激のある場所。
