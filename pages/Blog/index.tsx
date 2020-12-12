@@ -6,17 +6,13 @@ import { Grid } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    [theme.breakpoints.down('xs')]: {
-      height: 750,
-    },
-    [theme.breakpoints.up('sm')]: {
-      height: 1000,
-    },
-    [theme.breakpoints.up('md')]: {
-      height: 1000,
-    },
     backgroundColor: theme.palette.primary.main,
     justifyContent: 'center',
+    minHeight: '100vh',
+    [theme.breakpoints.down('xs')]: { paddingBottom: 50 },
+    [theme.breakpoints.up('sm')]: { paddingBottom: 200 },
+    [theme.breakpoints.up('md')]: { paddingBottom: 300 },
+    [theme.breakpoints.up('lg')]: { paddingBottom: 350 },
   },
   firstPhoto: {
     objectFit: 'cover',
@@ -56,6 +52,13 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: 10,
     color: theme.palette.primary.contrastText,
   },
+  blogItem: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingTop: 20,
+  },
 }));
 
 const Blog = ({ blog }) => {
@@ -63,60 +66,46 @@ const Blog = ({ blog }) => {
 
   return (
     <div className={classes.container}>
-      <Grid container justify={'center'}>
-        {blog.map((blog, index) =>
-          index === 0 ? (
-            <Grid item xs={12} key={blog.id}>
-              <div
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  paddingTop: 20,
-                }}
-              >
-                <img
-                  src={blog.image.url}
-                  alt=''
-                  onClick={() =>
-                    Router.push(`Blog/${blog.id}`).then(() =>
-                      window.scrollTo(0, 0)
-                    )
-                  }
-                  className={classes.firstPhoto}
-                />
-                <div className={classes.title}>{blog.title}</div>
-              </div>
-            </Grid>
-          ) : (
-            <Grid item xs={12} md={5} key={blog.id}>
-              <div
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  paddingTop: 20,
-                }}
-              >
-                <img
-                  src={blog.image.url}
-                  alt=''
-                  className={classes.photo}
-                  onClick={() =>
-                    Router.push(`Blog/${blog.id}`).then(() =>
-                      window.scrollTo(0, 0)
-                    )
-                  }
-                  style={{ borderRadius: 21 }}
-                />
-                <div className={classes.title}>{blog.title}</div>
-              </div>
-            </Grid>
-          )
-        )}
-      </Grid>
+      <div style={{ maxWidth: 960, margin: 'auto' }}>
+        <Grid container justify={'center'}>
+          {blog.map((blog, index) =>
+            index === 0 ? (
+              <Grid item xs={12} key={blog.id}>
+                <div className={classes.blogItem}>
+                  <img
+                    src={blog.image.url}
+                    alt=''
+                    onClick={() =>
+                      Router.push(`Blog/${blog.id}`).then(() =>
+                        window.scrollTo(0, 0)
+                      )
+                    }
+                    className={classes.firstPhoto}
+                  />
+                  <div className={classes.title}>{blog.title}</div>
+                </div>
+              </Grid>
+            ) : (
+              <Grid item xs={12} md={5} key={blog.id}>
+                <div className={classes.blogItem}>
+                  <img
+                    src={blog.image.url}
+                    alt=''
+                    className={classes.photo}
+                    onClick={() =>
+                      Router.push(`Blog/${blog.id}`).then(() =>
+                        window.scrollTo(0, 0)
+                      )
+                    }
+                    style={{ borderRadius: 21 }}
+                  />
+                  <div className={classes.title}>{blog.title}</div>
+                </div>
+              </Grid>
+            )
+          )}
+        </Grid>
+      </div>
     </div>
   );
 };

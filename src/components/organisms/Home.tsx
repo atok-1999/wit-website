@@ -24,15 +24,18 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('md')]: {
       height: 540,
     },
+    [theme.breakpoints.up('lg')]: {
+      height: 600,
+    },
   },
   subtitleIndex: {
     fontFamily: Font.WONDER_UNIT_SANS_REGULAR,
     fontSize: '3rem',
     [theme.breakpoints.down('sm')]: {
-      marginTop: 30,
+      marginTop: 40,
     },
     [theme.breakpoints.up('md')]: {
-      marginTop: 100,
+      marginTop: 110,
     },
   },
   subtitleCaption: {
@@ -41,15 +44,21 @@ const useStyles = makeStyles((theme) => ({
   },
   whoWeAreDescription: {
     fontFamily: Font.HIRAGINO_KAKU_GOTHIC_PRO,
-    marginTop: 40,
     lineHeight: 1.8,
     paddingRight: 10,
     paddingLeft: 10,
     [theme.breakpoints.down('sm')]: {
+      marginTop: 40,
       fontSize: '1rem',
       fontWeight: '700',
     },
     [theme.breakpoints.up('md')]: {
+      marginTop: 50,
+      fontSize: '1.6rem',
+      fontWeight: '700',
+    },
+    [theme.breakpoints.up('lg')]: {
+      marginTop: 60,
       fontSize: '1.6rem',
       fontWeight: '700',
     },
@@ -89,6 +98,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('md')]: {
       width: '50%',
       marginTop: -100,
+    },
+    [theme.breakpoints.up('lg')]: {
+      width: '50%',
+      marginTop: -160,
     },
   },
   visionSection: {
