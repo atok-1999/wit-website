@@ -29,14 +29,14 @@ Email: ${values.mail}
         try {
             await axios({
                 method: 'post',
-                url: 'https://hooks.slack.com/services/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',
+                url: process.env.SLACK_URL,
                 data: data
             })
             res.writeHead(201).end('Created');
             return;
         }
         catch(err) {
-            console.error(err);
+            console.error("this is axios Error: ", err);
             return;
         }
     } else {
