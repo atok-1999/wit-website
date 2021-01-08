@@ -8,10 +8,13 @@ import Button from '@material-ui/core/Button';
 import * as Font from 'src/constant/fonts'
 
 
+
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-        backgroundColor: theme.palette.primary.main
+        backgroundColor: theme.palette.primary.main,
+        padding: 0,
+        margin: 0,
     },
     title: {
         flexGrow: 1,
@@ -34,7 +37,7 @@ const Header = () => {
           <Button color="inherit" className={classes.menu}>ABOUT</Button>
           <Button color="inherit" className={classes.menu}>ACTIVITIES</Button>
           <Button color="inherit" className={classes.menu}>BLOG</Button>
-          <Button color="inherit" className={classes.menu}>CONTACT</Button>
+          <Link href="/contact"><Button color="inherit" className={classes.menu}>CONTACT</Button></Link>
         </Toolbar>
       </AppBar>
     </div>
