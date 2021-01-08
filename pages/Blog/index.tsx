@@ -61,7 +61,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Blog = ({ blog }) => {
+interface Props {
+  blog: any[] | undefined
+}
+
+const Blog = ({ blog }: Props) => {
   const classes = useStyles();
 
   return (
