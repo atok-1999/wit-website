@@ -1,9 +1,8 @@
-import * as React from 'react';
+import React from 'react';
+import { About as AboutComponent } from 'src/components/organisms/About';
 
 const About = () => {
-    return (
-        <p>About us</p>
-    )
-}
+  return <AboutComponent />;
+};
 
 export default About;

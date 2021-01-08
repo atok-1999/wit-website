@@ -5,43 +5,62 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import * as Font from 'src/constant/fonts'
-
+import * as Font from 'src/constant/fonts';
 
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        flexGrow: 1,
-        backgroundColor: theme.palette.primary.main,
-        padding: 0,
-        margin: 0,
+  root: {
+    flexGrow: 1,
+    backgroundColor: theme.palette.primary.main,
+  },
+  title: {
+    flexGrow: 1,
+    fontFamily: Font.CORPORATE_LOGO_ROUNDED,
+    cursor: 'pointer',
+  },
+  menu: {
+    fontFamily: Font.LEMONMILK_REGULAR,
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '0.75rem',
     },
-    title: {
-        flexGrow: 1,
-        fontFamily: Font.CORPORATE_LOGO_ROUNDED
-    },
-    menu: {
-        fontFamily: Font.LEMONMILK_REGULAR
-    }
-}))
+  },
+}));
 
 const Header = () => {
-    const classes = useStyles();
-    return (
+  const classes = useStyles();
+  return (
     <div className={classes.root}>
-        <AppBar position="static">
+      <AppBar position='static'>
         <Toolbar>
-          <Typography variant="h6" className={classes.title}>
-            Wit
-          </Typography>
-          <Button color="inherit" className={classes.menu}>ABOUT</Button>
-          <Button color="inherit" className={classes.menu}>ACTIVITIES</Button>
-          <Button color="inherit" className={classes.menu}>BLOG</Button>
-          <Link href="/contact"><Button color="inherit" className={classes.menu}>CONTACT</Button></Link>
+          <Link href='/'>
+            <Typography variant='h6' className={classes.title}>
+              <a>Wit</a>
+            </Typography>
+          </Link>
+          <Link href='/About'>
+            <Button color='inherit' className={classes.menu}>
+              <a>about</a>
+            </Button>
+          </Link>
+          <Link href='/Activities'>
+            <Button color='inherit' className={classes.menu}>
+              <a>activities</a>
+            </Button>
+          </Link>
+          <Link href='/Blog'>
+            <Button color='inherit' className={classes.menu}>
+              <a>blog</a>
+            </Button>
+          </Link>
+          <Link href='/Contact'>
+            <Button color='inherit' className={classes.menu}>
+              <a>contact</a>
+            </Button>
+          </Link>
         </Toolbar>
       </AppBar>
     </div>
-    )
+  );
 };
 
 export default Header;
