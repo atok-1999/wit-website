@@ -64,7 +64,9 @@ export const getStaticPaths = async () => {
   const data = await fetch('https://wit-api.microcms.io/api/v1/blog', key)
     .then((res) => res.json())
     .catch(() => null);
-  const paths = data.contents.map((content) => `/Blog/${content.id}`);
+  const contents: any[] = data.contents;
+  if (!contents) return {paths: [], fallback: false}
+  const paths = contents.map((content) => `/Blog/${content.id}`);
   return { paths, fallback: false };
 };
 
