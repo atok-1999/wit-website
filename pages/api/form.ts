@@ -7,13 +7,13 @@ module.exports = async (req: NextApiRequest, res: NextApiResponse) => {
     console.log("values: ", values)
 
     const text = `
-==========================================================
+=========================
 会社名： ${values.company}
 名前： ${values.name}
 Email: ${values.mail}
 電話番号: ${values.phoneNumber}
 内容: ${values.content}
-==========================================================
+=========================
     `
 
     const attachment = {
