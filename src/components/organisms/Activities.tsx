@@ -133,95 +133,142 @@ export const Activities = () => {
         <img
           src='/images/what-we-are-doing.png'
           alt='what-we-are-doing'
-          width={'70%'}
+          width={'65%'}
           style={{ marginTop: 20 }}
         />
       </div>
       <div className={classes.activityLeft}>
         <div className={classes.textSectionLeft}>
           <div className={classes.index}>001</div>
-          <div className={classes.caption}>定例会</div>
+          <div className={classes.caption}>Witマフィアの輩出</div>
           <div className={classes.rightSideImagePhoneContainer}>
             <div className={classes.rightSideImagePhone}>
-              <img src='/images/activity-1.png' alt='activity' width={'100%'} />
+              <img
+                src='/images/activity-image-1.png'
+                alt='activity'
+                width={'100%'}
+              />
             </div>
           </div>
           <div className={classes.description}>
-            定例ミーティングという名の、 <br />
-            情報アップデート会という名の、 <br />
-            飲み会。
+            起業家、VC、インターン生がほとんどを占めるサークルのため
+            <br /> 新鮮かつ貴重なインターン情報を共有しています。
+            <br /> 実務経験を通して、勝つために必要な「技」を身に付け、
+            <br />
+            同世代で頭一つ抜けた学生の集団を創ります！
           </div>
         </div>
         <img
-          src='/images/activity-1.png'
+          src='/images/activity-image-1.png'
           alt='activity'
           className={classes.rightSideImagePC}
         />
       </div>
       <div className={classes.activityRight}>
         <img
-          src='/images/activity-2.png'
+          src='/images/activity-image-2.png'
           alt='activity'
           className={classes.leftSideImagePC}
         />
         <div className={classes.textSectionRight}>
           <div className={classes.index}>002</div>
-          <div className={classes.caption}>インターン生輩出</div>
+          <div className={classes.caption}>イノベイティブなイベント</div>
           <div className={classes.leftSideImagePhoneContainer}>
             <div className={classes.leftSideImagePhone}>
-              <img src='/images/activity-2.png' alt='activity' width={'100%'} />
+              <img
+                src='/images/activity-image-2.png'
+                alt='activity'
+                width={'100%'}
+              />
             </div>
           </div>
           <div className={classes.description}>
-            イケてる企業と、インターンを探して
+            ネットやSNSに入り乱れているありふれたビジネスイベント
+            <br /> ではなく、これまでにはない革新的なイベントを開催します！
+            <br /> 多方面から頂く厳選された協賛イベントを通じて、学生にとって
             <br />
-            いる優秀な学生をマッチングさせる
-            <br />
-            プラットフォームを構築します。
+            価値のあるものを提供します！
           </div>
         </div>
       </div>
       <div className={classes.activityLeft}>
         <div className={classes.textSectionLeft}>
           <div className={classes.index}>003</div>
-          <div className={classes.caption}>勉強会</div>
+          <div className={classes.caption}>交流会</div>
           <div className={classes.rightSideImagePhoneContainer}>
             <div className={classes.rightSideImagePhone}>
-              <img src='/images/activity-3.png' alt='activity' width={'100%'} />
+              <img
+                src='/images/activity-image-3.png'
+                alt='activity'
+                width={'100%'}
+              />
             </div>
           </div>
           <div className={classes.description}>
-            著名な社長の話を一方的に聞く講演会のような形は、ニーズがあればやろうと思いますが、もっとアクティブな勉強会をしたい。
-            例えば、学生メンバーが、協力してくれる会社に行き、戦略を練るとか。
+            少人数でのミーティングや、飲み会をする中で
+            <br /> 互いの現在地を把握したり、情報交換をしたりと、
+            <br />
+            同士と刺激し合える場を作ります！
           </div>
         </div>
         <img
-          src='/images/activity-3.png'
+          src='/images/activity-image-3.png'
           alt='activity'
           className={classes.rightSideImagePC}
         />
       </div>
       <div className={classes.activityRight}>
         <img
-          src='/images/activity-4.png'
+          src='/images/activity-image-4.png'
           alt='activity'
           className={classes.leftSideImagePC}
         />
         <div className={classes.textSectionRight}>
           <div className={classes.index}>004</div>
-          <div className={classes.caption}>
-            おもしろそうな <br />
-            イベントの開催
-          </div>
+          <div className={classes.caption}>スポーツアクティビティ</div>
           <div className={classes.leftSideImagePhoneContainer}>
             <div className={classes.leftSideImagePhone}>
-              <img src='/images/activity-4.png' alt='activity' width={'100%'} />
+              <img
+                src='/images/activity-image-4.png'
+                alt='activity'
+                width={'100%'}
+              />
             </div>
           </div>
           <div className={classes.description}>
-            メンバーが魅力的なイベントを発案した際の、また企業や行政など外部から価値のあるイベントのコラボを依頼された場合、Witのアセットを用いて、最高のイベントになるよう全力でサポートします。
+            週末など、定期的にフットサルや野球、
+            <br />
+            バドミントンを通して親睦を深めよう！
+            <br /> また、日常生活にフレッシュな体を取り戻そう！
           </div>
         </div>
+      </div>
+      <div className={classes.activityLeft}>
+        <div className={classes.textSectionLeft}>
+          <div className={classes.index}>005</div>
+          <div className={classes.caption}>???</div>
+          <div className={classes.rightSideImagePhoneContainer}>
+            <div className={classes.rightSideImagePhone}>
+              <img
+                src='/images/activity-image-5.png'
+                alt='activity'
+                width={'100%'}
+              />
+            </div>
+          </div>
+          <div className={classes.description}>
+            あなたがWitのアセットを活用して、社会にインパクトのあるイベントを創造してください！
+            「子供は誰でも芸術家だ。
+            問題は大人になっても、芸術家でいられるかどうかだ。」
+            <br />
+            －パブロ・ピカソ
+          </div>
+        </div>
+        <img
+          src='/images/activity-image-5.png'
+          alt='activity'
+          className={classes.rightSideImagePC}
+        />
       </div>
     </div>
   );

@@ -6,8 +6,11 @@ import Router from 'next/router';
 const useStyles = makeStyles((theme) => ({
   main: {
     backgroundColor: theme.palette.primary.main,
-    [theme.breakpoints.down('sm')]: {
-      height: 300,
+    [theme.breakpoints.down('xs')]: {
+      height: 280,
+    },
+    [theme.breakpoints.up('sm')]: {
+      height: 400,
     },
     [theme.breakpoints.up('md')]: {
       height: 550,
@@ -18,20 +21,26 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     textAlign: 'center',
     backgroundColor: theme.palette.secondary.main,
-    [theme.breakpoints.down('sm')]: {
-      height: 400,
+    [theme.breakpoints.down('xs')]: {
+      marginTop: 30,
+      height: 750,
+    },
+    [theme.breakpoints.up('sm')]: {
+      marginTop: 60,
+      height: 700,
     },
     [theme.breakpoints.up('md')]: {
-      height: 540,
-    },
-    [theme.breakpoints.up('lg')]: {
-      height: 600,
+      height: 900,
     },
   },
   subtitleIndex: {
     fontFamily: Font.WONDER_UNIT_SANS_REGULAR,
     fontSize: '3rem',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('xs')]: {
+      marginTop: 40,
+      fontSize: '2.5rem',
+    },
+    [theme.breakpoints.up('sm')]: {
       marginTop: 40,
     },
     [theme.breakpoints.up('md')]: {
@@ -40,27 +49,49 @@ const useStyles = makeStyles((theme) => ({
   },
   subtitleCaption: {
     fontFamily: Font.WONDER_UNIT_SANS_REGULAR,
-    fontSize: '2.5rem',
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '2rem',
+    },
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '2.5rem',
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '2.5rem',
+    },
+  },
+  whoWeAreDescriptionHeader: {
+    fontFamily: Font.HIRAGINO_KAKU_GOTHIC_PRO,
+    fontWeight: 700,
+    marginTop: 40,
+    [theme.breakpoints.down('xs')]: {
+      marginLeft: 20,
+      marginRight: 20,
+      marginBottom: 30,
+      fontSize: '1.2rem',
+    },
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '1.4rem',
+      marginBottom: 60,
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1.7rem',
+      marginBottom: 60,
+    },
   },
   whoWeAreDescription: {
     fontFamily: Font.HIRAGINO_KAKU_GOTHIC_PRO,
-    lineHeight: 1.8,
-    paddingRight: 10,
-    paddingLeft: 10,
-    [theme.breakpoints.down('sm')]: {
-      marginTop: 40,
-      fontSize: '1rem',
-      fontWeight: '700',
+    [theme.breakpoints.down('xs')]: {
+      marginLeft: 20,
+      marginRight: 20,
+      fontSize: '1.05rem',
+      lineHeight: 1.8,
+    },
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '1.1rem',
+      lineHeight: 1.9,
     },
     [theme.breakpoints.up('md')]: {
-      marginTop: 50,
-      fontSize: '1.6rem',
-      fontWeight: '700',
-    },
-    [theme.breakpoints.up('lg')]: {
-      marginTop: 60,
-      fontSize: '1.6rem',
-      fontWeight: '700',
+      fontSize: '1.45em',
     },
   },
   logo: {
@@ -92,46 +123,54 @@ const useStyles = makeStyles((theme) => ({
       marginTop: -30,
     },
     [theme.breakpoints.up('sm')]: {
-      width: '55%',
-      marginTop: -90,
+      width: '60%',
+      marginTop: -70,
     },
     [theme.breakpoints.up('md')]: {
-      width: '50%',
-      marginTop: -100,
+      width: '55%',
+      marginTop: -120,
     },
     [theme.breakpoints.up('lg')]: {
-      width: '50%',
+      width: '55%',
       marginTop: -160,
     },
   },
   visionSection: {
     color: theme.palette.secondary.main,
-    [theme.breakpoints.down('sm')]: {
-      height: 540,
+    [theme.breakpoints.down('xs')]: {
+      height: 700,
+    },
+    [theme.breakpoints.up('sm')]: {
+      height: 800,
     },
     [theme.breakpoints.up('md')]: {
-      height: 870,
+      height: 950,
     },
   },
   visionImg: {
-    width: '65%',
+    width: '62%',
     zIndex: 100,
     marginTop: 20,
   },
   visionDescription: {
     display: 'flex',
     justifyContent: 'flex-start',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '1rem',
+    [theme.breakpoints.down('xs')]: {
       marginTop: 60,
       marginLeft: 20,
-      lineHeight: 1.6,
+      fontSize: '1.05rem',
+      lineHeight: 1.8,
+    },
+    [theme.breakpoints.up('sm')]: {
+      marginTop: 60,
+      marginLeft: 30,
+      fontSize: '1.1rem',
+      lineHeight: 1.9,
     },
     [theme.breakpoints.up('md')]: {
-      fontSize: '1.6rem',
+      fontSize: '1.45rem',
       marginTop: 120,
       marginLeft: 50,
-      lineHeight: 1.8,
     },
   },
   newsEventSection: {
@@ -226,12 +265,27 @@ const Home = () => {
       <div className={classes.whoWeAreSection}>
         <div className={classes.subtitleIndex}>001</div>
         <div className={classes.subtitleCaption}>WHO WE ARE</div>
+        <div className={classes.whoWeAreDescriptionHeader}>
+          早稲田発「革新を創造する」スタートアップサークル
+        </div>
         <div className={classes.whoWeAreDescription}>
-          早稲田大学のイケイケスタートアップサークル。 <br />
-          起業したいやつら、行動力のある奴ら、
+          「学生で起業？」
           <br />
-          ここに、あつまれ。
+          早いものか。生き急いでるものか。
           <br />
+          彼らは周りより少し早く「やりたいこと」を見つけただけ。
+          <br />
+          自分の知的好奇心はどこに向いているのか、どうすれば満たされるのか。
+          <br />
+          己と向き合い、行動するのが、大学という期間なのではないか。
+          <br />
+          チャレンジでしか満たされない自分がいることを知っているのでは？
+          <br />
+          <br />
+          熱狂を求めるもの、ここに集え。
+          <br />
+          <br />
+          そして、日本、世界にインパクトを与える革新を創造しよう。
         </div>
       </div>
 
@@ -248,14 +302,19 @@ const Home = () => {
           </div>
         </div>
         <div className={classes.visionDescription}>
-          常にHOTで刺激のある場所。
+          周囲さえも熱くさせるエネルギー、
           <br />
-          「ここにくるといつもアイデアが浮かぶ」
+          非凡な知恵、とどまることを知らない向上心、
           <br />
-          「モチベーションが上がる」
+          比類なき感性。
           <br />
-          そんな学生の居場所を目指します。
+          多種多様な才能を持つ者達が集い、
           <br />
+          切磋琢磨し、
+          <br />
+          数年後、日本や世界を席巻するような人材が生まれる。
+          <br />
+          そんな場所を目指しています。
         </div>
       </div>
 
@@ -272,7 +331,7 @@ const Home = () => {
         >
           <div className={classes.hoverContainer}>
             <img
-              src='/images/event-sample-1.png'
+              src='/images/event-image-1.png'
               alt='event-1'
               style={{ width: '100%' }}
             />
@@ -285,7 +344,7 @@ const Home = () => {
           </div>
           <div className={classes.hoverContainer}>
             <img
-              src='/images/event-sample-2.png'
+              src='/images/event-image-2.png'
               alt='event-1'
               style={{ width: '100%' }}
             />
@@ -298,7 +357,7 @@ const Home = () => {
           </div>
           <div className={classes.hoverContainer}>
             <img
-              src='/images/event-sample-3.png'
+              src='/images/event-image-3.png'
               alt='event-1'
               style={{ width: '100%' }}
             />
@@ -311,7 +370,7 @@ const Home = () => {
           </div>
           <div className={classes.hoverContainer}>
             <img
-              src='/images/event-sample-4.png'
+              src='/images/event-image-4.png'
               alt='event-1'
               style={{ width: '100%' }}
             />

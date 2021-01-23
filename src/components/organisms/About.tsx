@@ -14,7 +14,14 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 24,
     fontWeight: 'bold',
     lineHeight: 2.1,
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '0.85rem',
+      marginLeft: 20,
+      marginRight: 20,
+      marginTop: 75,
+      marginBottom: 100,
+    },
+    [theme.breakpoints.up('sm')]: {
       fontSize: '0.9rem',
       marginLeft: 35,
       marginTop: 75,
@@ -42,7 +49,7 @@ export const About = () => {
         />
       </div>
       <div style={{ position: 'relative', marginTop: 50 }}>
-        <img src='/images/about-sample.png' alt='about' width={'60%'} />
+        <img src='/images/about-image.png' alt='about' width={'60%'} />
         <img
           src='/images/stimulating-environment.png'
           alt='about'
@@ -50,15 +57,23 @@ export const About = () => {
         />
       </div>
       <div className={classes.description}>
-        ここにくると、
+        「やりたいこと」は <br />
+        　みつかったか？
         <br />
-        新しいアイデアが浮かぶ。
         <br />
-        モチベーションが上がる。
+        刺激がある場所。
         <br />
-        みんなから反応をもらえる。
+        仲間がいる場所。
         <br />
-        いつもHOTで燃えている。
+        好きを知る場所。
+        <br />
+        ここに来ると、
+        <br />
+        普段の学生生活では思いつかない新しいアイデアが浮かぶ。
+        <br />
+        仲間から刺激をもらえてモチベーションが200%になる。
+        <br />
+        大人の世界でも通用するビジネス経験の機会があふれている。
         <br />
         そんな場所を目指しています。
       </div>
