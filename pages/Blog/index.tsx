@@ -1,114 +1,48 @@
 import * as React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Router from 'next/router';
-import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles((theme) => ({
   container: {
     backgroundColor: theme.palette.primary.main,
-    justifyContent: 'center',
-    minHeight: '100vh',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    minHeight: '120vh',
     [theme.breakpoints.down('xs')]: { paddingBottom: 50 },
     [theme.breakpoints.up('sm')]: { paddingBottom: 200 },
     [theme.breakpoints.up('md')]: { paddingBottom: 300 },
     [theme.breakpoints.up('lg')]: { paddingBottom: 350 },
   },
-  firstPhoto: {
-    objectFit: 'cover',
-    cursor: 'pointer',
-    [theme.breakpoints.down('xs')]: {
-      height: 120,
-      width: 300,
-    },
-    [theme.breakpoints.up('sm')]: {
-      height: 200,
-      width: 450,
-    },
-    [theme.breakpoints.up('md')]: {
-      height: 300,
-      width: 700,
-    },
-  },
-  photo: {
-    objectFit: 'cover',
-    cursor: 'pointer',
-    [theme.breakpoints.down('xs')]: {
-      height: 120,
-      width: 300,
-    },
-    [theme.breakpoints.up('sm')]: {
-      height: 200,
-      width: 450,
-    },
-    [theme.breakpoints.up('md')]: {
-      height: 200,
-      width: 350,
-    },
-  },
-  title: {
-    fontSize: '1rem',
-    cursor: 'pointer',
-    paddingTop: 10,
-    color: theme.palette.primary.contrastText,
-  },
   blogItem: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingTop: 20,
+    borderRadius: 20,
+    backgroundColor: theme.palette.secondary.main,
+    width: 494,
+    maxWidth: '80%',
+    overflow: 'hidden',
+    [theme.breakpoints.down('xs')]: { height: 180, marginTop: 40 },
+    [theme.breakpoints.up('sm')]: { height: 201, marginTop: 60 },
   },
 }));
 
 interface Props {
-  blog: any[] | undefined
+  blogs: any[] | undefined;
 }
 
-const Blog = ({ blog }: Props) => {
+const Blog = ({ blogs }: Props) => {
   const classes = useStyles();
 
   return (
     <div className={classes.container}>
-      <div style={{ maxWidth: 960, margin: 'auto' }}>
-        <Grid container justify={'center'}>
-          {blog.map((blog, index) =>
-            index === 0 ? (
-              <Grid item xs={12} key={blog.id}>
-                <div className={classes.blogItem}>
-                  <img
-                    src={blog.image.url}
-                    alt=''
-                    onClick={() =>
-                      Router.push(`Blog/${blog.id}`).then(() =>
-                        window.scrollTo(0, 0)
-                      )
-                    }
-                    className={classes.firstPhoto}
-                  />
-                  <div className={classes.title}>{blog.title}</div>
-                </div>
-              </Grid>
-            ) : (
-              <Grid item xs={12} md={5} key={blog.id}>
-                <div className={classes.blogItem}>
-                  <img
-                    src={blog.image.url}
-                    alt=''
-                    className={classes.photo}
-                    onClick={() =>
-                      Router.push(`Blog/${blog.id}`).then(() =>
-                        window.scrollTo(0, 0)
-                      )
-                    }
-                    style={{ borderRadius: 21 }}
-                  />
-                  <div className={classes.title}>{blog.title}</div>
-                </div>
-              </Grid>
-            )
-          )}
-        </Grid>
-      </div>
+      {blogs.length > 0 &&
+        blogs.map((blog, index) => (
+          <iframe key={blog.id} className={classes.blogItem} src={blog.url} />
+        ))}
+      {!blogs ||
+        (blogs.length === 0 && (
+          <div style={{ color: 'white', fontSize: '2rem', marginTop: 30 }}>
+            ブログページ準備中
+          </div>
+        ))}
     </div>
   );
 };
@@ -125,7 +59,7 @@ export const getStaticProps = async () => {
     .catch(() => null);
   return {
     props: {
-      blog: data.contents,
+      blogs: data.contents,
     },
   };
 };
