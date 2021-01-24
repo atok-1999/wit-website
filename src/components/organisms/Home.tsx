@@ -118,6 +118,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   video: {
+    paddingBottom: '48.4%',
     [theme.breakpoints.down('xs')]: {
       width: '85%',
       marginTop: -42,
@@ -256,6 +257,7 @@ const Home = () => {
               autoPlay={true}
               loop={true}
               playsInline={true}
+              muted={true}
               className={classes.video}
             />
           </div>
