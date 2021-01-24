@@ -255,6 +255,7 @@ const Home = () => {
               src='/wit-promotion.mp4'
               autoPlay={true}
               loop={true}
+              playsInline={true}
               className={classes.video}
             />
           </div>
