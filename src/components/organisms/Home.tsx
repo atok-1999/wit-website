@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
       height: 750,
     },
     [theme.breakpoints.up('sm')]: {
-      marginTop: 60,
+      marginTop: 100,
       height: 700,
     },
     [theme.breakpoints.up('md')]: {
@@ -119,20 +119,20 @@ const useStyles = makeStyles((theme) => ({
   },
   video: {
     [theme.breakpoints.down('xs')]: {
-      width: '78%',
-      marginTop: -30,
+      width: '85%',
+      marginTop: -42,
     },
     [theme.breakpoints.up('sm')]: {
-      width: '60%',
-      marginTop: -70,
+      width: '70%',
+      marginTop: -80,
     },
     [theme.breakpoints.up('md')]: {
-      width: '55%',
+      width: '65%',
       marginTop: -120,
     },
     [theme.breakpoints.up('lg')]: {
-      width: '55%',
-      marginTop: -160,
+      width: '62%',
+      marginTop: -170,
     },
   },
   visionSection: {
@@ -251,13 +251,12 @@ const Home = () => {
             </div>
           </div>
           <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-            <div className={classes.video}>
-              <img
-                src='/images/video-sample-img.png'
-                alt='video'
-                width={'100%'}
-              />
-            </div>
+            <video
+              src='/wit-promotion.mp4'
+              autoPlay={true}
+              loop={true}
+              className={classes.video}
+            />
           </div>
         </div>
       </div>
