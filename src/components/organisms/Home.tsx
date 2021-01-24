@@ -118,7 +118,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   video: {
-    paddingBottom: '48.4%',
+    height: '100%',
     [theme.breakpoints.down('xs')]: {
       width: '85%',
       marginTop: -42,
