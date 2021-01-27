@@ -149,7 +149,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   visionImg: {
-    width: '62%',
+    margin: '0 auto',
+    width: '58%',
     zIndex: 100,
     marginTop: 20,
   },
@@ -298,11 +299,15 @@ const Home = () => {
           <div className={classes.subtitleIndex}>002</div>
           <div className={classes.subtitleCaption}>VISION</div>
         </div>
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <div className={classes.visionImg}>
-            <img src='/images/vision.png' alt='vision' width={'100%'} />
-          </div>
+
+        <div className={classes.visionImg}>
+          <img
+            src='/images/vision.png'
+            alt='vision'
+            style={{ width: '100%' }}
+          />
         </div>
+
         <div className={classes.visionDescription}>
           周囲さえも熱くさせるエネルギー、
           <br />
