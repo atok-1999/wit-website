@@ -131,7 +131,7 @@ export const Activities = () => {
     <div className={classes.container}>
       <div style={{ textAlign: 'center' }}>
         <img
-          src='/images/what-we-are-doing.png'
+          src='/images/what-we-are-doing-1.jpg'
           alt='what-we-are-doing'
           width={'65%'}
           style={{ marginTop: 20 }}

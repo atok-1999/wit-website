@@ -302,7 +302,7 @@ const Home = () => {
 
         <div className={classes.visionImg}>
           <img
-            src='/images/activity-image-1.png'
+            src='/images/vision-1.jpg'
             alt='vision'
             style={{ width: '100%' }}
           />

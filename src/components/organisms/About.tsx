@@ -42,7 +42,7 @@ export const About = () => {
     <div className={classes.container}>
       <div style={{ textAlign: 'center' }}>
         <img
-          src='/images/activity-image-1.png'
+          src='/images/exciting-feeling2.jpg'
           alt='exciting-feeling'
           width={'70%'}
           style={{ marginTop: 20 }}
