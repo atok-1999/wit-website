@@ -254,7 +254,7 @@ const Home = () => {
           </div>
           <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
             <video
-              src='/wit-promotion.mp4'
+              src='/wit-promotion-1.mp4'
               autoPlay={true}
               loop={true}
               playsInline={true}
